@@ -13,7 +13,7 @@
 
 (defn create-compilation-target [filepath] { 
         :filepath (init-target-path filepath)
-        :buffer (hyc filepath) 
+        :buffer (hy2py filepath) 
 }) 
 
 
@@ -36,7 +36,7 @@
 })
 
 
-(defn hyc [filepath]
+(defn hy2py [filepath]
     (-> (check_output ["hy2py3" filepath]) (.decode)))
 
 
